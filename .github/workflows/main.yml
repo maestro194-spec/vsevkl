@@ -28,12 +28,12 @@ jobs:
           gradle-version: '8.7'
 
       - name: Build APK
-        working-directory: vse_vkl_mvp40
+        working-directory: vse_vkl_mvp39
         run: gradle :app:assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: vse-vkl-debug-apk
-          path: vse_vkl_mvp40/app/build/outputs/apk/debug/*.apk
+          path: vse_vkl_mvp39/app/build/outputs/apk/debug/*.apk 
           if-no-files-found: error
