@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Unpack project
-        run: vse_vkl_mvp40.zip
+        run: unzip -o vse_vkl_mvp40.zip
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -28,7 +28,7 @@ jobs:
           gradle-version: '8.7'
 
       - name: Build APK
-        working-directory: vse_vkl_mvp39
+        working-directory: vse_vkl_mvp40
         run: gradle :app:assembleDebug --stacktrace
 
       - name: Upload APK
